@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/tickets.png" type="image/x-icon">
+
+    <title>TicketFlow</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    
+</head>
+
+<body>
+    <!-- Navigation -->
+    <div class="navbar navbar-expand-lg navbar-dark " style="background-color: rgb(14, 6, 63); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" >
+        <div class="container" >
+            <a class="navbar-brand" href="train.html" ><b>SurveyStats.gov</b></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" >
+                    <li class="nav-item">
+                        <a class="nav-link " href="train.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="train.html#surveys">Surveys</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="train.html#stats">Statistics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="train.html#profile">Profile</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of Navigation -->
+
+    <section class="hero-section text-white py-5" style="background-color: rgb(39, 92, 190);">
+        <div class="container d-flex " style="height: 30vh;">
+            <!-- Backdrop Container (Left side) -->
+            <div class="backdrop-container" style="flex: 1; height: 100%; background-image: url('assets/traffic.jpg'); background-size: cover;  border: 3px solid rgb(0, 0, 0);">
+            </div>
+    
+            <!-- Text Section (Right side) -->
+            <div class="text-container" style="flex: 1; text-align: center;">
+                <h1 class="display-4" style="padding-left: 5%;"><b>State of Roads and Traffic in India</b></h1>
+            </div>
+        </div>
+    </section>
+    
+    <section class="survey-section py-5" style="background-color: rgb(14, 6, 63); color: white;">
+        <div class="container">
+            <form id="traffic-form">
+                <div class="row" style="padding-left: 5px; padding-right: 5px; ">
+                    <!-- Name Field -->
+                    <div class="col-md-6 mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+    
+                    <!-- Email Field -->
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+    
+                    <!-- Age Field -->
+                    <div class="col-md-6 mb-3">
+                        <label for="age" class="form-label">Age</label>
+                        <input type="number" class="form-control" id="age" placeholder="Enter your age" required>
+                    </div>
+    
+                    <!-- Gender Field -->
+                    <div class="col-md-6 mb-3">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select class="form-select" id="gender" required>
+                            <option value="">Select your gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+    
+                    <!-- Traffic Frequency -->
+                    <div class="col-md-6 mb-3">
+                        <label for="traffic-frequency" class="form-label">How often do you experience traffic congestion?</label>
+                        <select class="form-select" id="traffic-frequency" style="color: green;";required>
+                            <option value="">Select Frequency</option>
+                            <option value="Rarely">Rarely</option>
+                            <option value="Occasionally">Occasionally</option>
+                            <option value="Frequently">Frequently</option>
+                            <option value="Always">Always</option>
+                        </select>
+                    </div>
+    
+                    <!-- Road Condition -->
+                    <div class="col-md-6 mb-3">
+                        <label for="road-condition" class="form-label">How would you rate the condition of roads in your area?</label>
+                        <select class="form-select" id="road-condition" required>
+                            <option value="">Select Condition</option>
+                            <option value="Poor">Poor</option>
+                            <option value="Fair">Fair</option>
+                            <option value="Good">Good</option>
+                            <option value="Excellent">Excellent</option>
+                        </select>
+                    </div>
+    
+                    <!-- Opinion on Traffic Management -->
+                    <div class="col-md-6 mb-3">
+                        <label for="traffic-management" class="form-label">How satisfied are you with the current traffic management in your area?</label>
+                        <div>
+                            <input type="radio" class="btn-check" name="traffic-management" id="traffic-satisfied" value="Satisfied" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="traffic-satisfied">Satisfied</label>
+    
+                            <input type="radio" class="btn-check" name="traffic-management" id="traffic-unsatisfied" value="Unsatisfied" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="traffic-unsatisfied">Unsatisfied</label>
+                        </div>
+                    </div>
+    
+                    
+                    <!-- Preferred Mode of Transport -->
+                    <div class="col-md-6 mb-3">
+                        <label for="transport-mode" class="form-label">What is your preferred mode of transport?</label>
+                        <div>
+                            <input type="checkbox" class="btn-check" id="car" value="Car" autocomplete="off">
+                            <label class="btn btn-outline-secondary" for="car">Car</label>
+    
+                            <input type="checkbox" class="btn-check" id="bus" value="Bus" autocomplete="off">
+                            <label class="btn btn-outline-secondary" for="bus">Bus</label>
+    
+                            <input type="checkbox" class="btn-check" id="bike" value="Bike" autocomplete="off">
+                            <label class="btn btn-outline-secondary" for="bike">Bike</label>
+    
+                            <input type="checkbox" class="btn-check" id="walk" value="Walking" autocomplete="off">
+                            <label class="btn btn-outline-secondary" for="walk">Walking</label>
+                        </div>
+                    </div>
+    
+
+                    <div class="col-md-6 mb-3">
+                        <label for="incident-witnessed" class="form-label">Have you ever witnessed a traffic incident?</label>
+                        <div>
+                            <input type="radio" class="btn-check" name="incident-witnessed" id="incident-yes" value="Yes" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="incident-yes">Yes</label>
+    
+                            <input type="radio" class="btn-check" name="incident-witnessed" id="incident-no" value="No" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="incident-no">No</label>
+                        </div>
+                    </div>
+    
+                    <!-- Car Ownership -->
+                    <div class="col-md-6 mb-3">
+                        <label for="car-ownership" class="form-label">Do you own a car?</label>
+                        <div>
+                            <input type="radio" class="btn-check" name="car-ownership" id="car-own" value="Yes" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="car-own">Yes</label>
+    
+                            <input type="radio" class="btn-check" name="car-ownership" id="car-dont-own" value="No" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="car-dont-own">No</label>
+                        </div>
+                    </div>
+    
+                    <!-- Preferred Route -->
+                    <div class="col-md-6 mb-3">
+                        <label for="preferred-route" class="form-label">What is your preferred route for daily commute?</label>
+                        <input type="text" class="form-control" id="preferred-route" placeholder="Enter your preferred route">
+                    </div>
+    
+                    <!-- Use of Public Transport -->
+                    <div class="col-md-6 mb-3">
+                        <label for="public-transport" class="form-label">Do you use public transport regularly?</label>
+                        <div>
+                            <input type="radio" class="btn-check" name="public-transport" id="transport-yes" value="Yes" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="transport-yes">Yes</label>
+    
+                            <input type="radio" class="btn-check" name="public-transport" id="transport-no" value="No" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="transport-no">No</label>
+                        </div>
+                    </div>
+    
+                    <!-- Condition of Traffic Signals -->
+                    <div class="col-md-6 mb-3">
+                        <label for="traffic-signals" class="form-label">How would you rate the condition of traffic signals in your area?</label>
+                        <select class="form-select" id="traffic-signals">
+                            <option value="">Select Rating</option>
+                            <option value="Poor">Poor</option>
+                            <option value="Fair">Fair</option>
+                            <option value="Good">Good</option>
+                            <option value="Excellent">Excellent</option>
+                        </select>
+                    </div>
+    
+                    <!-- Traffic Awareness Programs -->
+                    <div class="col-md-6 mb-3">
+                        <label for="traffic-awareness" class="form-label">Are you aware of any traffic awareness programs in your area?</label>
+                        <select class="form-select" id="traffic-awareness">
+                            <option value="">Select Awareness</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+    
+                    <!-- Carpooling -->
+                    <div class="col-md-6 mb-3">
+                        <label for="carpooling" class="form-label">Are you open to carpooling?</label>
+                        <div>
+                            <input type="radio" class="btn-check" name="carpooling" id="carpool-yes" value="Yes" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="carpool-yes">Yes</label>
+    
+                            <input type="radio" class="btn-check" name="carpooling" id="carpool-no" value="No" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="carpool-no">No</label>
+                        </div>
+                    </div>
+    
+                    <!-- Impact of Weather on Traffic -->
+                    <div class="col-md-6 mb-3">
+                        <label for="weather-impact" class="form-label">How often does weather affect traffic in your area?</label>
+                        <select class="form-select" id="weather-impact">
+                            <option value="">Select Frequency</option>
+                            <option value="Rarely">Rarely</option>
+                            <option value="Occasionally">Occasionally</option>
+                            <option value="Frequently">Frequently</option>
+                            <option value="Always">Always</option>
+                        </select>
+                    </div>
+    
+                    <!-- Road Construction -->
+                    <div class="col-md-6 mb-3">
+                        <label for="road-construction" class="form-label">Are there any ongoing road constructions in your area?</label>
+                        <select class="form-select" id="road-construction">
+                            <option value="">Select Status</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+    
+                    <!-- Traffic Enforcement -->
+                    <div class="col-md-6 mb-3">
+                        <label for="traffic-enforcement" class="form-label">Do you think traffic enforcement is effective in your area?</label>
+                        <div>
+                            <input type="radio" class="btn-check" name="traffic-enforcement" id="enforcement-yes" value="Yes" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="enforcement-yes">Yes</label>
+    
+                            <input type="radio" class="btn-check" name="traffic-enforcement" id="enforcement-no" value="No" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="enforcement-no">No</label>
+                        </div>
+                    </div>
+    
+                    <!-- Traffic-related Social Media -->
+                    <div class="col-md-6 mb-3">
+                        <label for="traffic-social-media" class="form-label">Do you follow any traffic-related social media accounts?</label>
+                        <select class="form-select" id="traffic-social-media">
+                            <option value="">Select Option</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+    
+                    <!-- Traffic Apps Usage -->
+                    <div class="col-md-6 mb-3">
+                        <label for="traffic-apps" class="form-label">Do you use traffic apps to check routes and traffic conditions?</label>
+                        <div>
+                            <input type="radio" class="btn-check" name="traffic-apps" id="apps-yes" value="Yes" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="apps-yes">Yes</label>
+    
+                            <input type="radio" class="btn-check" name="traffic-apps" id="apps-no" value="No" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="apps-no">No</label>
+                        </div>
+                    </div>
+    
+                    
+                    <!-- Suggestions for Improvement -->
+                    <div class="col-md-12 mb-5">
+                        <label for="suggestions" class="form-label">Suggestions for improving traffic and road conditions</label>
+                        <textarea class="form-control" id="suggestions" rows="3" placeholder="Your suggestions here"></textarea>
+                    </div>
+
+    
+                    <!-- Submit Button -->
+                    <div class="col-md-12 mb-3">
+                        <button type="submit" class="btn btn-primary w-100" style="background-color: rgb(39, 92, 190);">Submit Survey</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class=" text-white py-3" style="background-color: rgb(39, 92, 190);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" >
+                    <h5>SurveyStats.gov</h5>  
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="validation.js"></script>
+
+</body>
+</html>
+
